@@ -1,186 +1,132 @@
-/* General reset for the website */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
 body {
-  background-color: #000;
-  color: #fff;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  color: white;
 }
 
-/* Navbar and Logo */
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: black;
-  z-index: 1000;
-  left: 0;
+  padding: 20px;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-}
-
-.oval-logo {
-  background-color: #fff;
-  padding: 10px 20px;
-  border-radius: 50px;
+.logo {
+  border: 2px solid white;
+  padding: 5px 15px;
+  border-radius: 30px;
   font-weight: bold;
-  color: black;
-  text-align: center;
 }
 
-/* Navigation links */
-.nav-links a {
+nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  margin-left: 20px;
+  font-weight: 500;
 }
 
-.nav-links a:hover {
-  color: orange;
-}
-
-/* Hero Section */
 .hero {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
-  padding: 0 20px;
-  margin-top: 80px; /* Add space for navbar */
 }
 
-.hero-content h1 {
+.border-text {
   font-size: 4rem;
-  font-weight: bold;
-  color: white;
-}
-
-.zoom-effect {
-  display: inline-block;
-  padding: 10px;
   border: 2px solid white;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
 }
 
-.zoom-effect:hover {
-  transform: scale(1.2);
-  border-color: orange;
+.border-text:hover {
+  transform: scale(1.1);
 }
 
-/* Links under Hero Section */
-.links {
-  margin-top: 20px;
-  text-align: center;
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 2rem 0;
 }
 
-.links a {
+.contact-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid white;
   color: white;
   text-decoration: none;
-  margin: 10px;
-  padding: 10px 20px;
-  border: 2px solid white;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.links a:hover {
-  background-color: orange;
-}
-
-/* Contact Form */
-.contact-form {
-  background-color: #111;
-  padding: 50px 20px;
+  transition: transform 0.2s ease;
+  width: 80%;
   text-align: center;
-  margin-top: 80px; /* Add space from the top */
 }
 
-.contact-form h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: white;
+.contact-buttons a:hover {
+  transform: scale(1.05);
 }
 
-.contact-form form {
+.contact-buttons a.active {
+  transform: scale(0.95);
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  padding: 20px;
 }
 
-.contact-form form input,
-.contact-form form textarea {
-  width: 80%;
-  padding: 15px;
-  margin: 10px 0;
-  border: 2px solid white;
-  border-radius: 5px;
-  background-color: #222;
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  background: black;
+  border: 1px solid white;
   color: white;
-  font-size: 1rem;
 }
 
-.contact-form form button {
+.contact-form button {
   padding: 10px 20px;
-  background-color: orange;
+  background: transparent;
   color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.contact-form form button:hover {
-  background-color: #e85d04;
+.contact-form button:hover {
+  transform: scale(1.05);
 }
 
-/* Cursor Styles */
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+/* Custom Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
   border: 2px solid orange;
+  border-radius: 50%;
+  position: fixed;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease;
+  z-index: 9999;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
+/* Responsive Fix */
+@media (min-width: 768px) {
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .nav-links a {
-    font-size: 1rem;
-    margin: 0 10px;
-  }
-
-  .contact-form form input,
-  .contact-form form textarea {
-    width: 90%;
-  }
-
-  .contact-form form button {
-    font-size: 1rem;
+  .contact-buttons a {
+    width: auto;
   }
 }
