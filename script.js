@@ -1,29 +1,14 @@
-// Cursor Effect
-const cursor = document.querySelector('.custom-cursor');
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
-});
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-// Tap animation for mobile
-document.querySelectorAll('.contact-buttons a').forEach(button => {
-  button.addEventListener('touchstart', () => {
-    button.classList.add('active');
-  });
+  const email = document.getElementById('email').value;
+  const name = document.getElementById('name').value;
+  const message = document.getElementById('message').value;
 
-  button.addEventListener('touchend', () => {
-    button.classList.remove('active');
-  });
+  if (!email.includes('@') || name.trim() === "" || message.trim() === "") {
+    alert('Please fill in all fields correctly.');
+    return;
+  }
 
-  button.addEventListener('mousedown', () => {
-    button.classList.add('active');
-  });
-
-  button.addEventListener('mouseup', () => {
-    button.classList.remove('active');
-  });
-
-  button.addEventListener('mouseleave', () => {
-    button.classList.remove('active');
-  });
+  alert('Form submitted! Backend not connected yet.');
 });
