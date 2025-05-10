@@ -3,44 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Refilwe Molapisi - Web Developer</title>
+  <title>Refilwe Molapisi | Web Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">Refilwe Molapisi</div>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Get in Touch</a>
-    </nav>
+  <header id="home">
+    <div class="hero">
+      <h1>Refilwe Molapisi</h1>
+      <h2 class="typewriter">Aspiring Web Developer</h2>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1><span class="border-text">I am</span> <br><span class="border-text">Website</span><br><span class="border-text">Developer</span></h1>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-buttons">
-        <a href="mailto:refilwemolapisi25@gmail.com">Email</a>
-        <a href="https://github.com/RefilweMo" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/refilwe-molapisi-538a38348/" target="_blank">LinkedIn</a>
-        <a href="https://www.fiverr.com/refilwemolapisi" target="_blank">Fiverr</a>
+  <section id="about">
+    <div class="about-container">
+      <div class="about-photo">
+        <img src="assets/profile.jpg" alt="Profile photo of Refilwe" />
       </div>
+      <div class="about-text">
+        <h3>About Me</h3>
+        <p>
+          I'm Refilwe Molapisi, an aspiring web developer with a passion for crafting user-friendly and responsive websites. Though I have no professional experience yet, my journey into the world of coding began at the FNB App Academy, where I’ve been immersed in building modern web applications from scratch. This portfolio is my very first project—designed using HTML, CSS, and JavaScript—to reflect my creativity, learning, and commitment to growth. With a keen eye for clean design and interactive elements, I aim to bring value to any web development project I join. Let’s connect and create something meaningful together!
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="project-card">
+      <h4>Personal Portfolio Website</h4>
+      <p>
+        My first project, built with HTML, CSS, and JavaScript to showcase my skills from the FNB App Academy. Features responsive design, zoom animations, and a spam-protected contact form.
+      </p>
+    </div>
+    <div class="project-placeholder">More projects coming soon...</div>
+  </section>
 
-  <div class="custom-cursor"></div>
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Java</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="socials">
+      <a href="https://www.fiverr.com/refilwemolapisi" target="_blank">Fiverr</a>
+      <a href="https://www.linkedin.com/in/refilwe-molapisi-538a38348/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/RefilweMo" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Refilwe Molapisi</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
